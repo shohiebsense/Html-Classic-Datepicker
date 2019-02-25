@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/spacing_normal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_spinner_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@drawable/bg_custom_spinner"
+        app:layout_constraintRight_toLeftOf="@+id/layout_spinner_month"
+        android:paddingTop="@dimen/spacing_tiny"
+        android:paddingBottom="@dimen/spacing_tiny">
+
+        <Spinner
+            android:id="@+id/spinner_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/image_dropdown_day"
+            android:paddingStart="@dimen/spacing_small"
+            android:paddingEnd="@dimen/spacing_small"
+            android:paddingTop="@dimen/spacing_tiny"
+            android:paddingBottom="@dimen/spacing_tiny"
+            android:background="@android:color/transparent"
+            android:spinnerMode="dropdown"/>
+
+        <View
+            android:id="@+id/view_divider_vertical_spinner_day"
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            style="@style/DefaultViewDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/spinner_day"
+            app:layout_constraintRight_toLeftOf="@+id/image_dropdown_day"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <ImageView
+            android:id="@+id/image_dropdown_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/view_divider_vertical_spinner_day"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingStart="@dimen/spacing_tiny"
+            android:layout_marginEnd="@dimen/spacing_tiny"
+            android:src="@drawable/baseline_arrow_drop_down_black_24"
+            />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_spinner_month"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_custom_spinner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/layout_spinner_day"
+        app:layout_constraintRight_toLeftOf="@+id/layout_spinner_year"
+        android:paddingTop="@dimen/spacing_tiny"
+        android:paddingBottom="@dimen/spacing_tiny"
+        >
+
+        <Spinner
+            android:id="@+id/spinner_month"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/image_dropdown_month"
+            android:paddingStart="@dimen/spacing_small"
+            android:paddingEnd="@dimen/spacing_small"
+            android:paddingTop="@dimen/spacing_tiny"
+            android:paddingBottom="@dimen/spacing_tiny"
+            android:background="@android:color/transparent"
+            android:spinnerMode="dropdown"/>
+
+        <View
+            android:id="@+id/view_divider_vertical_spinner_month"
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            style="@style/DefaultViewDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/spinner_month"
+            app:layout_constraintRight_toLeftOf="@+id/image_dropdown_month"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <ImageView
+            android:id="@+id/image_dropdown_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/view_divider_vertical_spinner_month"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingStart="@dimen/spacing_tiny"
+            android:layout_marginEnd="@dimen/spacing_tiny"
+            android:src="@drawable/baseline_arrow_drop_down_black_24"
+            />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_spinner_year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/layout_spinner_month"
+        android:paddingTop="@dimen/spacing_tiny"
+        android:paddingBottom="@dimen/spacing_tiny"
+        android:background="@drawable/bg_custom_spinner"
+        >
+
+        <Spinner
+            android:id="@+id/spinner_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/image_dropdown_year"
+            android:paddingStart="@dimen/spacing_small"
+            android:paddingEnd="@dimen/spacing_small"
+            android:paddingTop="@dimen/spacing_tiny"
+            android:paddingBottom="@dimen/spacing_tiny"
+            android:background="@android:color/transparent"
+            android:spinnerMode="dropdown"/>
+
+        <View
+            android:id="@+id/view_divider_vertical_spinner_year"
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            style="@style/DefaultViewDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/spinner_year"
+            app:layout_constraintRight_toLeftOf="@+id/image_dropdown_year"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <ImageView
+            android:id="@+id/image_dropdown_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/view_divider_vertical_spinner_year"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingStart="@dimen/spacing_tiny"
+            android:src="@drawable/baseline_arrow_drop_down_black_24"
+            android:layout_marginEnd="@dimen/spacing_tiny"
+            />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
