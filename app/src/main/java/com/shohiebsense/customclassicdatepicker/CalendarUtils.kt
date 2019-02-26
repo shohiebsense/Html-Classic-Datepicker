@@ -31,7 +31,7 @@ class CalendarUtils {
 
     fun populateYearsSpinner(onShowingYearList : (ArrayList<Int>) -> Unit) {
         GlobalScope.launch {
-           // var yearList = async { getYears() }
+            // var yearList = async { getYears() }
             var yearList = getYears()
             withContext(Dispatchers.Main){
                 onShowingYearList(yearList)
@@ -50,7 +50,7 @@ class CalendarUtils {
     fun populatemonthsSpinner(
         year : Int,
         onShowingMonthList: (Array<out String>) -> Unit){
-        GlobalScope.launch(){
+        GlobalScope.launch{
             var months = getMonths()
             if(year == getYear()){
                 months = months.copyOfRange(0, getMonth().value)
@@ -72,9 +72,8 @@ class CalendarUtils {
         GlobalScope.launch {
             var length = getMonthsLengthInDays(year,month)
             if(getMonth().value == month && getYear() == year){
-                length = day
+                length = getDayOfMonth()
             }
-
             var dayList = arrayListOf<Int>()
             for(i in 1 .. length){
                 dayList.add(i)
